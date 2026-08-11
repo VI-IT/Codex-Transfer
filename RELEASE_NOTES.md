@@ -1,3 +1,29 @@
+# Codex Transfer by VI-IT 1.0.1
+
+## English
+
+- Optional project cleanup scan before backup
+- Scrollable candidate list grouped by project, size and example paths
+- Green, yellow and red risk levels; only green is selected by default
+- Detection of rebuildable output, old tests, caches, superseded builds, downloadable dependencies and AI models
+- Second confirmation before permanent deletion
+- Responsive progress dialogs with cancellation during analysis, backup and restore
+- Window auto-fit only at startup; manual resizing remains under user control
+- Explicit liability notice in the program information
+
+## Deutsch
+
+- Optionale Projektbereinigung vor der Sicherung
+- Scrollbare Fundliste nach Projekt, Größe und Beispielpfaden
+- Grüne, gelbe und rote Risikostufen; nur Grün ist vorausgewählt
+- Erkennung von reproduzierbaren Builds, alten Tests, Caches, ersetzten Versionen, erneut herunterladbaren Abhängigkeiten und KI-Modellen
+- Zweite Bestätigung vor dem endgültigen Löschen
+- Reaktionsfähige Fortschrittsfenster mit Abbruch bei Analyse, Sicherung und Wiederherstellung
+- Automatische Fensteranpassung nur beim Start; danach freie manuelle Größenwahl
+- Deutlicher Haftungsausschluss in den Programminformationen
+
+---
+
 # Codex Transfer by VI-IT 1.0.0
 
 ## English

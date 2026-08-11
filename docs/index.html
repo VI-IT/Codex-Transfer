@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Codex Transfer by VI-IT — Back Up and Migrate Codex to a New Windows PC</title>
-  <meta name="description" content="Free portable Windows tool to back up and migrate Codex sessions, settings, tokens, skills, plugins, projects, SSH keys and Git configuration to a new PC.">
-  <meta name="keywords" content="Codex migration tool, Codex backup, move Codex to new PC, transfer Codex sessions, backup Codex settings, ChatGPT Codex Windows migration, Codex restore, portable Windows backup">
+  <meta name="description" content="Free portable Windows tool to back up and migrate Codex sessions, settings, tokens, skills, plugins and projects, with optional risk-based project cleanup before backup.">
+  <meta name="keywords" content="Codex migration tool, Codex backup, move Codex to new PC, transfer Codex sessions, backup Codex settings, clean Codex projects, old builds cleanup, ChatGPT Codex Windows migration, Codex restore, portable Windows backup">
   <meta name="author" content="VI-IT">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://vi-it.github.io/Codex-Transfer/">
@@ -37,15 +37,16 @@
         "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "Backup and migration utility",
         "operatingSystem": "Windows 10, Windows 11",
-        "softwareVersion": "1.0.0",
-        "description": "Portable Windows tool to securely back up and migrate a local Codex workspace, including sessions, settings, file-based tokens, skills, plugins, projects, SSH keys and Git configuration, to a new PC.",
+        "softwareVersion": "1.0.1",
+        "description": "Portable Windows tool to securely back up and migrate a local Codex workspace, with optional risk-based cleanup of old builds, caches, tests, dependencies and AI models before backup.",
         "downloadUrl": "https://github.com/VI-IT/Codex-Transfer/releases/latest/download/Codex-Transfer-by-VI-IT.exe",
         "url": "https://vi-it.github.io/Codex-Transfer/",
         "screenshot": [
           "https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-backup-en.png",
-          "https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-restore-en.png"
+          "https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-restore-en.png",
+          "https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-cleanup-en.png"
         ],
-        "featureList": ["Local Codex backup", "Codex session migration", "Windows user-path mapping", "Optional password protection", "Project folder transfer", "SSH and Git configuration backup", "German and English interface"],
+        "featureList": ["Local Codex backup", "Codex session migration", "Windows user-path mapping", "Optional password protection", "Risk-based project cleanup", "Old build and cache detection", "AI model review", "Project folder transfer", "SSH and Git configuration backup", "German and English interface"],
         "author": {"@type": "Organization", "name": "VI-IT", "url": "https://www.vi-it.de"},
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
       },
@@ -86,6 +87,7 @@
         <article class="card"><h3>Projects and developer setup</h3><p class="muted">Transfer selected project folders and optionally SSH keys, known hosts and global Git configuration.</p></article>
         <article class="card"><h3>Automatic path mapping</h3><p class="muted">Supported references to the old Windows user profile are mapped to the profile on the new computer.</p></article>
         <article class="card"><h3>Private by design</h3><p class="muted">Backup contents remain local. No analytics, advertising, tracking or VI-IT cloud service is used.</p></article>
+        <article class="card"><h3>Project cleanup review</h3><p class="muted">Inspect old builds, tests, caches, dependencies and AI models by size and risk before backup.</p></article>
       </div>
     </section>
 
@@ -101,10 +103,18 @@
     </section>
 
     <section class="wrap section">
+      <h2>Clean project leftovers before backup</h2>
+      <p>Green rebuildable findings are preselected. Yellow and red findings require deliberate selection, and permanent deletion requires a second confirmation.</p>
+      <img class="shot" src="assets/codex-transfer-cleanup-en.png" alt="Codex project cleanup review with risk levels">
+      <p>The scanner is also available separately as <a href="https://github.com/VI-IT/Codex-Cleanup">Codex Cleanup by VI-IT</a>.</p>
+    </section>
+
+    <section class="wrap section">
       <h2>Security and realistic limits</h2>
       <p>Password-protected archives use AES-256-CBC encryption, HMAC-SHA-256 integrity verification and PBKDF2-SHA-256 key derivation. A password is optional, but a backup without one is not effectively protected.</p>
       <p>Device-bound Windows credentials and browser sessions may require signing in again. Cloud ChatGPT conversations, memories, custom GPTs and subscription data remain associated with the ChatGPT account and are not recreated by a local backup.</p>
       <p class="notice">The portable EXE is currently unsigned. Download only from the official GitHub release, verify the SHA-256 checksum and never publish a `.codex` backup.</p>
+      <p class="notice"><strong>Use at your own risk.</strong> Review every selected path and keep a current backup. To the extent permitted by law, VI-IT accepts no liability for data loss, downtime, damage or consequential loss.</p>
       <p><a href="https://github.com/VI-IT/Codex-Transfer/blob/main/PRIVACY.md">Privacy details</a> · <a href="https://github.com/VI-IT/Codex-Transfer/blob/main/SECURITY.md">Security policy</a> · <a href="https://github.com/VI-IT/Codex-Transfer/blob/main/SUPPORT.md">Support</a></p>
     </section>
 

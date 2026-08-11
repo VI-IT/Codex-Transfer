@@ -2,3 +2,5 @@ Copyright (c) 2026 VI-IT. All rights reserved.
 
 Codex Transfer by VI-IT is distributed in binary form only. No source-code license is granted. For licensing and redistribution inquiries, contact info@vi-it.de.
 
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. TO THE EXTENT PERMITTED BY LAW, VI-IT ACCEPTS NO LIABILITY FOR DATA LOSS, DOWNTIME, DAMAGE OR CONSEQUENTIAL LOSS ARISING FROM USE OF THE SOFTWARE.
+

@@ -14,7 +14,7 @@
 
 ## English
 
-Codex Transfer by VI-IT is a free, portable Windows backup and migration utility for moving a local OpenAI Codex setup from one computer to another. It discovers the local Codex home, project folders, settings, sessions, skills and plugins and stores the selected data in one `.codex` backup file. During restore, old Windows user-profile paths are mapped to the profile on the new PC.
+Codex Transfer by VI-IT is a free, portable Windows backup and migration utility for moving a local OpenAI Codex setup from one computer to another. It discovers the local Codex home, project folders, settings, sessions, skills and plugins and stores the selected data in one `.codex` backup file. During restore, old Windows user-profile paths are mapped to the profile on the new PC. Before backup, version 1.0.1 can optionally scan selected projects for old builds, caches, test output, downloadable dependencies and AI models.
 
 <img src="assets/codex-transfer-backup-en.png" alt="Codex Transfer English backup screen for migrating Codex sessions, settings, projects and tokens to a new Windows PC" width="820">
 
@@ -39,6 +39,7 @@ Codex Transfer by VI-IT is a free, portable Windows backup and migration utility
 - Optional global Git configuration from `%USERPROFILE%\.gitconfig`
 - Optional experimental Windows Codex app-package data
 - Text-based references to the previous Windows user profile in supported configuration and Git files
+- Optional project cleanup review before backup with green, yellow and red risk levels
 
 Device-bound Windows Credential Manager entries, browser sessions and cloud-managed ChatGPT account data cannot be guaranteed to move. Signing in again may be required. Cloud ChatGPT conversations, memories, custom GPTs and subscription settings belong to the ChatGPT account and are not recreated from the local `.codex` archive.
 
@@ -53,6 +54,14 @@ Device-bound Windows Credential Manager entries, browser sessions and cloud-mana
 
 <img src="assets/codex-transfer-restore-en.png" alt="Codex Transfer English restore screen for setting up Codex on a new Windows computer" width="820">
 
+### Review project leftovers before backup
+
+Before creating the archive, Codex Transfer can scan the selected projects for rebuildable output, old test runs, caches, superseded builds, downloadable dependencies and AI model files. Green findings are rebuildable and preselected. Yellow and red findings are never selected automatically. Every permanent deletion requires a second confirmation.
+
+<img src="assets/codex-transfer-cleanup-en.png" alt="Codex project cleanup review with green yellow and red risk levels" width="820">
+
+The same scanner is also available as the independent portable [Codex Cleanup by VI-IT](https://github.com/VI-IT/Codex-Cleanup).
+
 ### Privacy and security
 
 - Backup contents are processed locally and are never uploaded to VI-IT
@@ -66,6 +75,8 @@ Without a password, the archive is not effectively protected from anyone who can
 
 Read the complete [privacy information](PRIVACY.md) and [security policy](SECURITY.md).
 
+> **Liability notice:** Use is entirely at your own risk. Review every selected path and keep a current backup. To the extent permitted by law, VI-IT accepts no liability for data loss, downtime, damage or consequential loss.
+
 ### Support development
 
 [Say thanks via Ko-fi](https://ko-fi.com/viitde) · [Support via PayPal](https://paypal.me/viitde)
@@ -78,7 +89,7 @@ Support is voluntary and does not unlock features.
 
 ## Deutsch
 
-Codex Transfer by VI-IT ist ein kostenloses, portables Windows-Programm zum sicheren Sichern und Übertragen eines lokalen OpenAI-Codex-Arbeitsplatzes auf einen neuen PC. Es erkennt den lokalen Codex-Ordner, Projektordner, Einstellungen, Sitzungen, Skills und Plugins und speichert die ausgewählten Daten in einer einzigen `.codex`-Sicherungsdatei. Bei der Wiederherstellung werden alte Windows-Benutzerpfade auf das Profil des neuen PCs angepasst.
+Codex Transfer by VI-IT ist ein kostenloses, portables Windows-Programm zum sicheren Sichern und Übertragen eines lokalen OpenAI-Codex-Arbeitsplatzes auf einen neuen PC. Es erkennt den lokalen Codex-Ordner, Projektordner, Einstellungen, Sitzungen, Skills und Plugins und speichert die ausgewählten Daten in einer einzigen `.codex`-Sicherungsdatei. Bei der Wiederherstellung werden alte Windows-Benutzerpfade auf das Profil des neuen PCs angepasst. Version 1.0.1 kann ausgewählte Projekte vor der Sicherung zusätzlich auf alte Builds, Caches, Testausgaben, erneut herunterladbare Abhängigkeiten und KI-Modelle prüfen.
 
 <img src="assets/codex-transfer-backup-de.png" alt="Deutsche Codex-Transfer-Oberfläche zum Sichern von Codex-Sitzungen, Einstellungen, Projekten und Tokens für einen PC-Umzug" width="820">
 
@@ -103,6 +114,7 @@ Codex Transfer by VI-IT ist ein kostenloses, portables Windows-Programm zum sich
 - Optional die globale Git-Konfiguration aus `%USERPROFILE%\.gitconfig`
 - Optional experimentelle Windows-Codex-Appdaten
 - Textbasierte Verweise auf das frühere Windows-Benutzerprofil in unterstützten Konfigurations- und Git-Dateien
+- Optionale Projektbereinigung vor der Sicherung mit grünen, gelben und roten Risikostufen
 
 Gerätegebundene Einträge des Windows Credential Managers, Browsersitzungen und cloudverwaltete ChatGPT-Kontodaten können nicht garantiert übertragen werden. Eine erneute Anmeldung kann erforderlich sein. ChatGPT-Cloudunterhaltungen, Memories, eigene GPTs und Abonnementdaten gehören zum ChatGPT-Konto und werden nicht aus der lokalen `.codex`-Datei neu angelegt.
 
@@ -114,6 +126,14 @@ Gerätegebundene Einträge des Windows Credential Managers, Browsersitzungen und
 4. Portable EXE und `.codex`-Datei auf den neuen Rechner kopieren.
 5. ChatGPT/Codex auf dem neuen PC installieren, einmal starten und wieder vollständig beenden.
 6. Codex Transfer öffnen, **Wiederherstellen** wählen und die Sicherung ausrollen.
+
+### Projekt-Altlasten vor der Sicherung prüfen
+
+Vor dem Erstellen des Archivs kann Codex Transfer die ausgewählten Projekte auf reproduzierbare Buildausgaben, alte Testläufe, Caches, ersetzte Builds, erneut herunterladbare Abhängigkeiten und KI-Modelle prüfen. Grüne Funde sind reproduzierbar und vorausgewählt. Gelbe und rote Funde werden niemals automatisch ausgewählt. Vor jeder endgültigen Löschung folgt eine zweite Bestätigung.
+
+<img src="assets/codex-transfer-cleanup-de.png" alt="Codex-Projektbereinigung mit grünen gelben und roten Risikostufen" width="820">
+
+Dieselbe Prüfung gibt es auch als eigenständige portable App [Codex Bereinigung by VI-IT](https://github.com/VI-IT/Codex-Cleanup).
 
 <img src="assets/codex-transfer-restore-de.png" alt="Deutsche Codex-Transfer-Wiederherstellung zum Einrichten von Codex auf einem neuen Windows-PC" width="820">
 
@@ -129,6 +149,8 @@ Gerätegebundene Einträge des Windows Credential Managers, Browsersitzungen und
 Ohne Passwort ist das Archiv nicht wirksam vor Personen geschützt, die Zugriff auf die Datei haben. Eine Sicherung kann Unterhaltungen, Quellcode, Zugangsdaten und SSH-Schlüssel enthalten. Bewahre sie vertraulich auf und lade sie niemals in ein Issue, einen Chat oder ein öffentliches Repository hoch.
 
 Lies die vollständigen [Datenschutzinformationen](PRIVACY.md) und die [Sicherheitsrichtlinie](SECURITY.md).
+
+> **Haftungsausschluss:** Die Nutzung erfolgt vollständig auf eigene Verantwortung. Prüfe jeden ausgewählten Pfad und erstelle eine aktuelle Sicherung. Soweit gesetzlich zulässig, übernimmt VI-IT keinerlei Haftung für Datenverlust, Ausfallzeiten, Schäden oder Folgeschäden.
 
 ### Entwicklung unterstützen
 
