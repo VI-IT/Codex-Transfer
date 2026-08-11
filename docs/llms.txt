@@ -1,0 +1,31 @@
+# Codex Transfer by VI-IT
+
+> Codex Transfer by VI-IT is a free portable Windows utility for backing up and migrating a local OpenAI Codex workspace to a new PC.
+
+The software can include the local Codex home, sessions, settings, state databases, file-based authentication data, skills, plugins, selected project folders, SSH keys and global Git configuration in one local `.codex` archive. During restore, supported references to the old Windows user profile are mapped to the new profile.
+
+Backup contents remain local and are not transmitted to VI-IT. The application makes a public GitHub Releases metadata request at startup to check for newer versions. A password is optional but strongly recommended.
+
+Codex Transfer does not guarantee migration of device-bound Windows credentials, browser sessions or cloud-managed ChatGPT account data. Reauthentication may be required.
+
+## Official resources
+
+- [Product page](https://vi-it.github.io/Codex-Transfer/)
+- [Official GitHub repository](https://github.com/VI-IT/Codex-Transfer)
+- [Latest Windows download](https://github.com/VI-IT/Codex-Transfer/releases/latest/download/Codex-Transfer-by-VI-IT.exe)
+- [Privacy](https://github.com/VI-IT/Codex-Transfer/blob/main/PRIVACY.md)
+- [Security](https://github.com/VI-IT/Codex-Transfer/blob/main/SECURITY.md)
+- [Support](https://github.com/VI-IT/Codex-Transfer/blob/main/SUPPORT.md)
+- [VI-IT](https://www.vi-it.de)
+
+## Product facts
+
+- Product: Codex Transfer by VI-IT
+- Version: 1.0.0
+- Platform: Windows 10 and Windows 11, x64
+- Distribution: one self-contained portable EXE
+- Price: free
+- Languages: German and English, selected automatically from Windows display language
+- Publisher: VI-IT
+- Status: independent software, not affiliated with or endorsed by OpenAI
+

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Codex Transfer by VI-IT — Back Up and Migrate Codex to a New Windows PC</title>
+  <meta name="description" content="Free portable Windows tool to back up and migrate Codex sessions, settings, tokens, skills, plugins, projects, SSH keys and Git configuration to a new PC.">
+  <meta name="keywords" content="Codex migration tool, Codex backup, move Codex to new PC, transfer Codex sessions, backup Codex settings, ChatGPT Codex Windows migration, Codex restore, portable Windows backup">
+  <meta name="author" content="VI-IT">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://vi-it.github.io/Codex-Transfer/">
+  <link rel="alternate" hreflang="en" href="https://vi-it.github.io/Codex-Transfer/#english">
+  <link rel="alternate" hreflang="de" href="https://vi-it.github.io/Codex-Transfer/#deutsch">
+  <link rel="alternate" hreflang="x-default" href="https://vi-it.github.io/Codex-Transfer/">
+  <link rel="icon" type="image/png" href="assets/codex-transfer-logo.png">
+  <link rel="help" type="text/plain" href="llms.txt" title="LLM-readable product summary">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VI-IT">
+  <meta property="og:title" content="Codex Transfer by VI-IT — Secure Windows PC Migration">
+  <meta property="og:description" content="Back up and move your local Codex workspace, sessions, settings, skills, plugins and projects to a new Windows PC with one portable EXE.">
+  <meta property="og:url" content="https://vi-it.github.io/Codex-Transfer/">
+  <meta property="og:image" content="https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-backup-en.png">
+  <meta property="og:image:alt" content="Codex Transfer backup interface on Windows">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Codex Transfer by VI-IT">
+  <meta name="twitter:description" content="Portable Windows backup and migration tool for a local Codex workspace.">
+  <meta name="twitter:image" content="https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-backup-en.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://vi-it.github.io/Codex-Transfer/#software",
+        "name": "Codex Transfer by VI-IT",
+        "alternateName": ["Codex Transfer", "Codex Migration Tool for Windows"],
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Backup and migration utility",
+        "operatingSystem": "Windows 10, Windows 11",
+        "softwareVersion": "1.0.0",
+        "description": "Portable Windows tool to securely back up and migrate a local Codex workspace, including sessions, settings, file-based tokens, skills, plugins, projects, SSH keys and Git configuration, to a new PC.",
+        "downloadUrl": "https://github.com/VI-IT/Codex-Transfer/releases/latest/download/Codex-Transfer-by-VI-IT.exe",
+        "url": "https://vi-it.github.io/Codex-Transfer/",
+        "screenshot": [
+          "https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-backup-en.png",
+          "https://vi-it.github.io/Codex-Transfer/assets/codex-transfer-restore-en.png"
+        ],
+        "featureList": ["Local Codex backup", "Codex session migration", "Windows user-path mapping", "Optional password protection", "Project folder transfer", "SSH and Git configuration backup", "German and English interface"],
+        "author": {"@type": "Organization", "name": "VI-IT", "url": "https://www.vi-it.de"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"How do I move Codex to a new Windows PC?","acceptedAnswer":{"@type":"Answer","text":"Close Codex on the old PC, create one local .codex backup with Codex Transfer, copy the portable EXE and backup to the new PC, install and close Codex there, then restore the archive. Supported old Windows user paths are mapped to the new profile."}},
+          {"@type":"Question","name":"Does Codex Transfer back up sessions, settings and projects?","acceptedAnswer":{"@type":"Answer","text":"Yes. It can include the local Codex home with sessions, settings, skills, plugins and file-based authentication data, selected project folders, and optionally SSH and global Git configuration."}},
+          {"@type":"Question","name":"Are backup contents uploaded to VI-IT?","acceptedAnswer":{"@type":"Answer","text":"No. Backup and restore data stays local. The application only requests public GitHub release metadata at startup to check for updates."}},
+          {"@type":"Question","name":"Is a password required?","acceptedAnswer":{"@type":"Answer","text":"No. A password is optional, but a strong password is recommended because a backup without one is not effectively protected from anyone who can access the file."}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root{color-scheme:dark;--bg:#0e1117;--card:#191d25;--line:#303744;--text:#f4f6f9;--muted:#a6afbd;--accent:#62d6a6;--blue:#39bff2;--warning:#f1b660}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:#83d4ff}.wrap{width:min(1120px,92vw);margin:auto}.nav{display:flex;gap:18px;align-items:center;padding:20px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:760;margin-right:auto;color:var(--text);text-decoration:none}.brand img{width:34px;height:34px}.hero{padding:58px 0 30px;text-align:center}.eyebrow{color:var(--accent);font-weight:750;letter-spacing:.05em;text-transform:uppercase}.hero h1{font-size:clamp(2.2rem,6vw,4.8rem);line-height:1.05;margin:.18em auto;max-width:1000px}.hero p{max-width:820px;margin:18px auto;color:var(--muted);font-size:1.16rem}.button{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#07120e;text-decoration:none;font-weight:760;padding:13px 22px;border-radius:12px;margin:8px}.button.alt{background:var(--card);color:var(--text);border:1px solid var(--line)}.brand-icon{width:24px;height:24px;object-fit:contain}.shot{display:block;width:min(920px,100%);margin:32px auto;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 70px #0009}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}.card h3{margin-top:0}.section{padding:45px 0}.section h2{font-size:clamp(1.7rem,4vw,2.35rem);line-height:1.2}.muted{color:var(--muted)}.notice{border-left:4px solid var(--warning);padding:13px 18px;background:#292318;border-radius:8px}.steps{counter-reset:step;display:grid;gap:11px}.steps li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}.steps li:before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:28px;height:28px;margin-right:10px;border-radius:50%;background:var(--accent);color:#07120e;font-weight:800}.footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 50px;color:var(--muted)}code{background:#222937;padding:2px 6px;border-radius:5px}@media(max-width:640px){.nav{flex-wrap:wrap}.hero{padding-top:28px}.hero h1{font-size:2.4rem}}
+  </style>
+</head>
+<body>
+  <nav class="wrap nav"><a class="brand" href="#english"><img src="assets/codex-transfer-logo.png" alt="">Codex Transfer by VI-IT</a><a href="#english">English</a><a href="#deutsch"><strong>Deutsch</strong></a><a href="https://github.com/VI-IT/Codex-Transfer">GitHub</a></nav>
+
+  <main>
+    <section id="english" class="wrap hero">
+      <div class="eyebrow">Portable Windows migration tool</div>
+      <h1>Move your Codex workspace to a new PC.</h1>
+      <p>Back up local Codex sessions, settings, file-based tokens, skills, plugins, projects, SSH keys and Git configuration into one `.codex` file—then restore them on another Windows computer.</p>
+      <a class="button" href="https://github.com/VI-IT/Codex-Transfer/releases/latest/download/Codex-Transfer-by-VI-IT.exe">Download free for Windows</a>
+      <a class="button alt" href="#deutsch">Deutsche Anleitung</a>
+      <img class="shot" src="assets/codex-transfer-backup-en.png" alt="English Codex Transfer backup screen with anonymized demo paths">
+    </section>
+
+    <section class="wrap section">
+      <h2>One local backup for the complete Codex workspace</h2>
+      <div class="grid">
+        <article class="card"><h3>Codex sessions and settings</h3><p class="muted">Include the local Codex home with chats, state databases, configuration, skills and plugins.</p></article>
+        <article class="card"><h3>Projects and developer setup</h3><p class="muted">Transfer selected project folders and optionally SSH keys, known hosts and global Git configuration.</p></article>
+        <article class="card"><h3>Automatic path mapping</h3><p class="muted">Supported references to the old Windows user profile are mapped to the profile on the new computer.</p></article>
+        <article class="card"><h3>Private by design</h3><p class="muted">Backup contents remain local. No analytics, advertising, tracking or VI-IT cloud service is used.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>How to migrate Codex between Windows PCs</h2>
+      <ol class="steps">
+        <li>Close ChatGPT and Codex completely on the old computer.</li>
+        <li>Create one `.codex` backup and optionally protect it with a strong password.</li>
+        <li>Copy the portable EXE and backup file to the new computer.</li>
+        <li>Install and close ChatGPT/Codex there, then restore the backup.</li>
+      </ol>
+      <img class="shot" src="assets/codex-transfer-restore-en.png" alt="English Codex Transfer restore screen for a new Windows PC">
+    </section>
+
+    <section class="wrap section">
+      <h2>Security and realistic limits</h2>
+      <p>Password-protected archives use AES-256-CBC encryption, HMAC-SHA-256 integrity verification and PBKDF2-SHA-256 key derivation. A password is optional, but a backup without one is not effectively protected.</p>
+      <p>Device-bound Windows credentials and browser sessions may require signing in again. Cloud ChatGPT conversations, memories, custom GPTs and subscription data remain associated with the ChatGPT account and are not recreated by a local backup.</p>
+      <p class="notice">The portable EXE is currently unsigned. Download only from the official GitHub release, verify the SHA-256 checksum and never publish a `.codex` backup.</p>
+      <p><a href="https://github.com/VI-IT/Codex-Transfer/blob/main/PRIVACY.md">Privacy details</a> · <a href="https://github.com/VI-IT/Codex-Transfer/blob/main/SECURITY.md">Security policy</a> · <a href="https://github.com/VI-IT/Codex-Transfer/blob/main/SUPPORT.md">Support</a></p>
+    </section>
+
+    <section id="deutsch" class="wrap section" lang="de">
+      <h2>Codex auf einen neuen Windows-PC übertragen</h2>
+      <p>Codex Transfer by VI-IT sichert den lokalen Codex-Arbeitsplatz mit Sitzungen, Einstellungen, dateibasierten Tokens, Skills, Plugins und ausgewählten Projektordnern. Optional können SSH-Schlüssel und die globale Git-Konfiguration aufgenommen werden. Alle ausgewählten Daten landen in einer einzigen lokalen `.codex`-Datei.</p>
+      <img class="shot" src="assets/codex-transfer-backup-de.png" alt="Deutsche Codex-Transfer-Sicherungsansicht mit anonymisierten Demopfaden">
+      <div class="grid">
+        <article class="card"><h3>Portable EXE</h3><p class="muted">Keine Installation und keine separate .NET-Laufzeit erforderlich.</p></article>
+        <article class="card"><h3>Automatische Sprache</h3><p class="muted">Deutsch unter deutschem Windows, sonst automatisch Englisch.</p></article>
+        <article class="card"><h3>Lokale Verarbeitung</h3><p class="muted">Sicherungsinhalte werden nicht an VI-IT oder andere Server übertragen.</p></article>
+        <article class="card"><h3>Updatehinweis</h3><p class="muted">Beim Start wird auf GitHub nach einer neueren offiziellen Version gesucht.</p></article>
+      </div>
+      <p><a class="button" href="https://github.com/VI-IT/Codex-Transfer/releases/latest/download/Codex-Transfer-by-VI-IT.exe">Codex Transfer herunterladen</a></p>
+    </section>
+
+    <section class="wrap section">
+      <h2>Support development / Entwicklung unterstützen</h2>
+      <p>Support is voluntary and does not unlock features. Die Unterstützung ist freiwillig und schaltet keine Funktionen frei.</p>
+      <a class="button alt" href="https://ko-fi.com/viitde"><img class="brand-icon" src="assets/kofi-icon.png" alt="">Ko-fi</a><a class="button alt" href="https://paypal.me/viitde"><img class="brand-icon" src="assets/paypal-icon.png" alt="">PayPal</a>
+    </section>
+  </main>
+
+  <footer class="wrap footer">Independent software by <a href="https://www.vi-it.de">VI-IT</a> · <a href="mailto:info@vi-it.de">info@vi-it.de</a><br>ChatGPT, Codex and OpenAI are trademarks of OpenAI. Codex Transfer by VI-IT is not affiliated with, sponsored, certified or endorsed by OpenAI.</footer>
+</body>
+</html>
+

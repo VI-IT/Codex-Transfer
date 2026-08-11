@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vi-it.github.io/Codex-Transfer/sitemap.xml
+# LLM-readable summary: https://vi-it.github.io/Codex-Transfer/llms.txt
+

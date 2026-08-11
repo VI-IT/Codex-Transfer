@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a reproducible Codex Transfer problem without private backup data.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Never attach a .codex backup or include passwords, access tokens, SSH keys, source code, private paths, email addresses or unredacted screenshots.
+  - type: input
+    id: version
+    attributes:
+      label: Codex Transfer version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, x64
+    validations:
+      required: true
+  - type: dropdown
+    id: operation
+    attributes:
+      label: Operation
+      options:
+        - Create backup
+        - Restore backup
+        - Update check
+        - User interface
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe expected and actual behavior and the steps needed to reproduce it. Use only anonymized paths and screenshots.
+    validations:
+      required: true
+

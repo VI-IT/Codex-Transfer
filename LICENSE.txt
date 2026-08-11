@@ -1,0 +1,4 @@
+Copyright (c) 2026 VI-IT. All rights reserved.
+
+Codex Transfer by VI-IT is distributed in binary form only. No source-code license is granted. For licensing and redistribution inquiries, contact info@vi-it.de.
+
